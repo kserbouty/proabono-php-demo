@@ -1,0 +1,16 @@
+body {
+    background-color: white;
+}
+
+.jumbotron {
+    background-color: powderblue;
+}
+
+#title-page {
+    margin-top: 150px;
+}
+
+#img-brand {
+    height: 60px;
+    width: 60px;
+}
