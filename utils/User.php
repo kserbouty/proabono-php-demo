@@ -109,15 +109,15 @@ class User {
 
     public function getId() {
         return $this->rawData_from_auth0['user_id']
-            ?? $this->rawData_from_auth0['sub']; //TODO: O.M How replace ??
+            ?? $this->rawData_from_auth0['sub'];
     }
 
 
     public function getDisplayName() {
-        return $this->rawData_from_auth0['nickname'] //TODO: O.M How replace ??
-            ?? $this->rawData_from_auth0['name'] //TODO: O.M How replace ??
-            ?? $this->rawData_from_auth0['email'] //TODO: O.M How replace ??
-            ?? '(unknown)'; //TODO: O.M How replace ??
+        return $this->rawData_from_auth0['nickname']
+            ?? $this->rawData_from_auth0['name']
+            ?? $this->rawData_from_auth0['email']
+            ?? '(unknown)';
     }
 
     public function getEmail() {

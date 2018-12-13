@@ -1,11 +1,19 @@
-<?php include 'layout/top.php'; ?>
+<?php include 'layout/header.php'; ?>
 
-<h1>My Subscription:</h1>
+<div class="card text-center" style="width: 70%;">
 
-<iframe id="myClientPortal"
-        width="1000"
-        height="1000"
-        src="<?= $customer->links['hosted-register'] ?>">
-</iframe>
+    <div class="card-header">
+        <h5>My Subscription:</h5>
+    </div>
 
-<?php include 'layout/bottom.php'; ?>
+    <div class="card-body" style="height: 600px;">
+        <iframe frameBorder="0"
+                width="100%"
+                height="100%"
+                src="<?= $customer->links['hosted-register'] ?>">
+        </iframe>
+    </div>
+
+</div>
+
+<?php include 'layout/footer.php'; ?>

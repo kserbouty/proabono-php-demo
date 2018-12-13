@@ -1,4 +1,4 @@
-<?php include 'layout/top.php'; ?>
+<?php include 'layout/header.php'; ?>
 
 <div class="container">
 
@@ -7,4 +7,4 @@
 
 </div>
 
-<?php include 'layout/bottom.php'; ?>
+<?php include 'layout/footer.php'; ?>

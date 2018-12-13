@@ -1,4 +1,4 @@
-<?php include 'layout/top.php'; ?>
+<?php include 'layout/header.php'; ?>
 
 <h1>Error
     <?php
@@ -15,4 +15,4 @@
 <?php var_dump($response); ?>
 <hr>
 
-<?php include 'layout/bottom.php'; ?>
+<?php include 'layout/footer.php'; ?>

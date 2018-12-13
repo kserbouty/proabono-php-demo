@@ -1,5 +1,5 @@
-<?php include 'layout/top.php'; ?>
+<?php include 'layout/header.php'; ?>
 
 <h1>Nope.</h1>
 
-<?php include 'layout/bottom.php'; ?>
+<?php include 'layout/footer.php'; ?>

@@ -4,11 +4,11 @@
 if (($response->status == 403)
     && ($response->error->code === 'Error.Customer.PaymentSettings.Missing')) {
 
-$messageError = 'Operation rejected, you have to fill your billing address first';
-$labelUrl = 'Update your billing address';
+$messageError = 'Operation rejected, you have to fill your payment information first';
+$labelUrl = 'Update your payment information';
 $url = '/../page/portal-register.php';
 
-include __DIR__ . '/../view/feature_update_rejected.php';
+include __DIR__ . '/../view/feature-update-rejected.php';
 }
 
 
@@ -20,7 +20,7 @@ $messageError = 'Operation rejected, you have to pay your previous bills first';
 $labelUrl = 'Clear your bills here';
 $url = '/../page/portal-home.php';
 
-include __DIR__ . '/../view/feature_update_rejected.php';
+include __DIR__ . '/../view/feature-update-rejected.php';
 }
 
 
@@ -55,7 +55,7 @@ else if ((($response->status == 404)
         $url = '/../page/portal-home.php';
     }
 
-include __DIR__ . '/../view/feature_update_rejected.php';
+include __DIR__ . '/../view/feature-update-rejected.php';
 }
 
 // IS NOT SUCCESS

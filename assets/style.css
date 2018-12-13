@@ -1,16 +1,32 @@
-body {
-    background-color: white;
+
+#img-brand {
+    height: 50px;
+    width: 50px;
 }
 
 .jumbotron {
-    background-color: powderblue;
+    background-color: GreenYellow;
 }
 
-#title-page {
-    margin-top: 150px;
+body {
+    position: absolute;
+    top: 0;
+    right: 0;
+    bottom: 0;
+    left: 0;
+
+    background-color: GhostWhite;
 }
 
-#img-brand {
-    height: 60px;
-    width: 60px;
+li {
+    padding-right: 5px;
+    padding-left: 5px;
+}
+
+p {
+    font-family: Mako, sans-serif;
+}
+
+h1, h2, h3, h4, h5 {
+    font-family: Baskerville,Baskerville Old Face,Hoefler Text,Garamond,Times New Roman,serif;
 }

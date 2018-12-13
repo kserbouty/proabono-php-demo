@@ -1,134 +1,89 @@
-<?php include 'layout/top.php'; ?>
+<?php include 'layout/header.php'; ?>
 
-<div id="title-page">
-    <div class="container">
-        <div class="mr-auto ml-auto m-5 text-center" style="width: 50%;">
-            <h1 class="m-3">Authentication Home</h1>
+<div class="container m-auto">
+
+    <div class="d-flex justify-content-between" >
+
+        <div class="p-4 jumbotron" style="width: 60%">
+
+            <div class="p-2">
+                <h2 class="text-center">
+                    About us
+                </h2>
+            </div>
+
+            <div class="p-2">
+                <p>
+                    Lorem ipsum dolor sit amet, consectetur adipiscing elit.
+                    Nulla mattis ex enim, at dignissim nunc auctor ac.
+                    Ut commodo et ex sed vestibulum. Fusce sit amet mollis ligula, nec dignissim mi.
+                    Praesent egestas et lacus nec placerat.
+                    Quisque pretium, sem sit amet lacinia egestas, arcu ex vehicula elit, ac vestibulum
+                    ipsum est quis diam. Vestibulum quis scelerisque justo. Sed dictum sem eros,
+                    a sagittis elit dapibus eu. Nulla porta enim sed nunc laoreet, eu condimentum felis tristique.
+                    Cras non dignissim nunc.
+                </p>
+            </div>
+
         </div>
-    </div>
-</div>
 
-<div class="container">
-    <div class="jumbotron">
-        <div class="container">
+        <div class="p-5 jumbotron" style="width: 30%">
 
+            <h4 class="text-center pb-2">Overview</h4>
+
+            <hr>
 
             <?php if($usages->page != null) {
 
                 foreach ($usages as $usage) {
 
-
-
                     // Case Feature Team Members available:
                     if ($usage->refFeature === 'team-members') { ?>
 
+                        <h5>
+                            Team members:
 
-                        Team members :<br>
-
-                        <?php
-                        // If
-                        if (($usage->quantityIncluded >= 0)
-                            && ($usage->quantityCurrent >= 0)) { ?>
-
-                            Vous avez <?= $usage->quantityIncluded ?> membres inclus dans votre offre.
-                            <br>
-                            Vous avez actuellement <?= $usage->quantityCurrent ?> membres.
-                            <br>
                             <a href="../page/home-auth/team-members.php?refCustomer=<?= $user->getId(); ?>&refFeature=<?= $usage->refFeature ?>">
-                                Gerer mes Team Members.
+                                <?= Tools::usageToString($usage) ?>
                             </a>
-                            <br><br>
-
-                        <?php } else { ?>
-
-                            Votre offre vous donne accès à une quantitée illimitée de membres.
-                            <br>
-                            Vous avez actuellement <?= $usage->quantityCurrent ?> membres.
-                            <br>
-                            <a href="../page/home-auth/team-members.php?refCustomer=<?= $user->getId(); ?>&refFeature=<?= $usage->refFeature ?>">
-                                Gerer mes Team Members.
-                            </a>
-                            <br><br>
-
-                        <?php } ?>
+                        </h5>
 
                     <?php }
+
                     // Case Feature Signature available:
-                    if ($usage->refFeature === 'signature') {
+                    if ($usage->refFeature === 'signature') { ?>
 
-                        ?>
+                        <h5>
+                            Signature:
 
-
-
-                        Signature :<br>
-
-                        <?php
-                        if (($usage->quantityIncluded >= 0)
-                            && ($usage->quantityCurrent >= 0)) { ?>
-
-                            Vous avez <?= $usage->quantityIncluded ?> signatures électronique inclus dans votre offre.
-                            <br>
-                            Vous avez actuellement <?= $usage->quantityCurrent ?> signatures consommé.
-                            <br>
                             <a href="../page/home-auth/signature.php?refCustomer=<?= $user->getId(); ?>&refFeature=<?= $usage->refFeature ?>">
-                                Signer un document.
+                                <?= Tools::usageToString($usage) ?>
                             </a>
-                            <br><br>
+                        </h5>
 
-                        <?php } else { ?>
-
-                            Votre abonnement vous donne accès à une quantité illimitée de signatures.
-                            <br>
-                            Vous avez actuellement <?= $usage->quantityCurrent ?> signatures consommé.
-                            <br>
-                            <a href="../page/home-auth/signature.php?refCustomer=<?= $user->getId(); ?>&refFeature=<?= $usage->refFeature ?>">
-                                Signer un document.
-                            </a>
-                            <br><br>
-
-                        <?php }
-                    }
+                    <?php }
 
                     // Case Support-24:
                     if ($usage->refFeature === 'support-24') { ?>
 
+                        <h5>
+                            Support 24h/24:
 
-                        Support 24h/24 :<br>
-
-                        <?php
-
-                        // If is enabled:
-                        if ($usage->is_enabled) { ?>
-
-                            Statut : Activé<br>
                             <a href="../page/home-auth/support-24.php?refCustomer=<?= $user->getId(); ?>&refFeature=<?= $usage->refFeature ?>">
-                                Désactiver.
+                                <?= Tools::usageToString($usage) ?>
                             </a>
-                            <br><br>
+                        </h5>
 
-
-                        <?php }
-
-                        // If not enabled:
-                        else { ?>
-
-                            Vous n'avez pas souscris à l'option.<br>
-                            <a href="../page/home-auth/support-24.php?refCustomer=<?= $user->getId(); ?>&refFeature=<?= $usage->refFeature ?>">
-                                Activer.
-                            </a>
-                            <br><br>
-
-                        <?php }
-                    }
+                    <?php }
                 }
             }
 
             // If not suscribed
             else { ?>
 
-            Vous n'avez pas souscris à d'offre pour le moment.<br><br>
+                Vous n'avez pas souscris à d'offre pour le moment.<br><br>
 
-                <iframe id="myClientPortal"
+                <iframe frameBorder="0"
                         width="1000"
                         height="500"
                         src="<?= $customer->links['hosted-home'] ?>">
@@ -137,7 +92,8 @@
             <?php } ?>
 
         </div>
+
     </div>
 </div>
 
-<?php include 'layout/bottom.php'; ?>
+<?php include 'layout/footer.php'; ?>

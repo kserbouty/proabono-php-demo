@@ -1,11 +1,19 @@
-<?php include 'layout/top.php'; ?>
+<?php include 'layout/header.php'; ?>
 
-<h1>Offers:</h1>
+<div class="card m-auto text-center" style="width: 80%;">
 
-<iframe id="myOffers"
-        width="1000"
-        height="500"
-        src="https://vente-EUR.proabono.com/pricing/TxGFOGI2QxafaACTnSfmETR6-xawIMvi_iWGWukfbQWjowj3BAWHAhv1xnt_hX42oxtwB1oKsYd6cY8VeeNoRFOHE3xgWFM0dtrwdYy2v8Y">
-</iframe>
+    <div class="card-header">
+        <h5>Pricing</h5>
+    </div>
 
-<?php include 'layout/bottom.php'; ?>
+    <div class="card-body" style="height: 600px;">
+        <iframe frameBorder="0"
+                width=100%
+                height=100%
+            src="https://vente-EUR.proabono.com/pricing/TxGFOGI2QxafaACTnSfmETR6-xawIMvi_iWGWukfbQWjowj3BAWHAhv1xnt_hX42oxtwB1oKsYd6cY8VeeNoRFOHE3xgWFM0dtrwdYy2v8Y">
+        </iframe>
+    </div>
+
+</div>
+
+<?php include 'layout/footer.php'; ?>
