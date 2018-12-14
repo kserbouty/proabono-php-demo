@@ -16,4 +16,6 @@
 
 </div>
 
+<?php include 'partial/faq-portal.php'; ?>
+
 <?php include 'layout/footer.php'; ?>

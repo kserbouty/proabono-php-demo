@@ -1,7 +1,7 @@
 
         </div>
 
-        <div class="flex-grow-0 flex-shrink-0">
+        <div class="flex-grow-0 flex-shrink-0 mt-3">
 
             <nav class="navbar navbar-expand-lg navbar-dark bg-dark justify-content-around">
 
