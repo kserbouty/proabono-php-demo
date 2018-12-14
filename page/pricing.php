@@ -9,7 +9,7 @@ $user = User::getCurrentUser(false);
 
 // if anonymous
 if (!$user) {
-    $urlGrid = 'https://vente-EUR.proabono.com/pricing';
+    $urlGrid = URL_PRICING_PUBLIC;
 
     include __DIR__ . '/../view/pricing.php';
 }

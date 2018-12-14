@@ -22,7 +22,7 @@ $user = isset($user) ? $user : User::getCurrentUser(false);
 
     <link rel="stylesheet" type="text/css" href="//fonts.googleapis.com/css?family=Mako" />
 
-    <title>E-Corporation</title>
+    <title>Sample SaaS</title>
 </head>
 
 <body class="d-flex flex-column">

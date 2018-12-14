@@ -11,17 +11,22 @@ $urlSuccess = isset($_GET['state']) ? $_GET['state'] : '/';
 
 //////// VARIABLES ///////////
 
-$customer = new Customer();
-
 //////// FETCH /////////////
 
-// Save Customer into ProAbono while the first connexion.
+/////////// CACHING STRATEGY ///////////
+if (ProAbono::$useCaching) {
+    // Save Customer into ProAbono while the first connexion.
 
-$customer->name = $user->getName();
-$customer->refCustomer = $user->getId();
-$customer->email = $user->getEmail();
-$response = $customer->save();
+    $customer = new Customer();
+    $customer->name = $user->getName();
+    $customer->refCustomer = $user->getId();
+    $customer->email = $user->getEmail();
+    $response = $customer->save();
 
+    // load its usages to have them cached
+    $usages = new UsageList();
+    $usages->fetch(null, $customer->refCustomer, null);
+}
 //////// VIEW //////////////
 
 if ($response->is_success()) {

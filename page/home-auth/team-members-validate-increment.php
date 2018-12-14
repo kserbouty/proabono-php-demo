@@ -36,7 +36,7 @@ if ($response->is_success()) {
     include __DIR__ . '/../../view/team-members-validate-increment.php';
 }
 else {
-    include __DIR__ . '/../../error/feature_update.php';
+    include __DIR__ . '/../../error/feature-unavailable.php';
 }
 
 

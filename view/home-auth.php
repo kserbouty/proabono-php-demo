@@ -33,7 +33,8 @@
 
             <hr>
 
-            <?php if($usages->totalItems > 0) {
+            <?php if(isset($usages)
+                && ($usages->totalItems > 0)) {
 
                 foreach ($usages as $usage) {
 
