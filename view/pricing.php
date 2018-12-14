@@ -10,7 +10,7 @@
         <iframe frameBorder="0"
                 width=100%
                 height=100%
-            src="https://vente-EUR.proabono.com/pricing/TxGFOGI2QxafaACTnSfmETR6-xawIMvi_iWGWukfbQWjowj3BAWHAhv1xnt_hX42oxtwB1oKsYd6cY8VeeNoRFOHE3xgWFM0dtrwdYy2v8Y">
+            src="<?= $urlGrid ?>">
         </iframe>
     </div>
 

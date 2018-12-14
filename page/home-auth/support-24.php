@@ -22,7 +22,8 @@ $response = $usage->fetch($refFeature, $refCustomer);
 //////// VIEW //////////////
 
 if ($response->is_success()
-    && $response->has_data()) {
+    // if we have data
+    && ($usage-> typeFeature)) {
     $is_enabled = $usage->is_enabled;
     include '../../view/support-24.php';
 }

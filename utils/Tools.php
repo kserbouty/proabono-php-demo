@@ -10,7 +10,6 @@ class Tools {
      */
     public static function usageToString($usage) {
 
-
         if ($usage->typeFeature === 'Consumption') {
 
             // Set current quantity.

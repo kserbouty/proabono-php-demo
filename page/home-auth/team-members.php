@@ -22,7 +22,8 @@ $response = $usage->fetch($refFeature, $refCustomer);
 //////// VIEW //////////////
 
 if ($response->is_success()
-    && $response->has_data()) {
+    // If we have data
+    && ($usage-> typeFeature)) {
     include __DIR__ . '/../../view/team-members.php';
 }
 else {

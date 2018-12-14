@@ -33,7 +33,7 @@
 
             <hr>
 
-            <?php if($usages->page != null) {
+            <?php if($usages->totalItems > 0) {
 
                 foreach ($usages as $usage) {
 
@@ -81,13 +81,9 @@
             // If not suscribed
             else { ?>
 
-                Vous n'avez pas souscris à d'offre pour le moment.<br><br>
+                Vous n'avez pas souscrit à d'offre pour le moment.<br><br>
 
-                <iframe frameBorder="0"
-                        width="1000"
-                        height="500"
-                        src="<?= $customer->links['hosted-home'] ?>">
-                </iframe>
+                <a href="/page/pricing.php">Souscrire</a>
 
             <?php } ?>
 
