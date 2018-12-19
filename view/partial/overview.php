@@ -1,41 +1,46 @@
-<?php foreach ($usages as $usage) {
+<?php if(isset($usages)
+    && ($usages->totalItems > 0)) { ?>
 
-    // Case Feature Team Members available:
-    if ($usage->refFeature === FEATURE_TEAM_MEMBERS) { ?>
+    <?php foreach ($usages as $usage) {
 
-        <h5>
-            Team members:
+        // Case Feature Team Members available:
+        if ($usage->refFeature === FEATURE_TEAM_MEMBERS) { ?>
 
-            <a href="../page/home-auth/team-members.php?refCustomer=<?= $user->getId(); ?>&refFeature=<?= $usage->refFeature ?>">
-                <?= Tools::usageToString($usage) ?>
-            </a>
-        </h5>
+            <h5>
+                Team members:
 
-    <?php }
+                <a href="../page/home-auth/team-members.php?refCustomer=<?= $user->getId(); ?>&refFeature=<?= $usage->refFeature ?>">
+                    <?= Tools::usageToString($usage) ?>
+                </a>
+            </h5>
 
-    // Case Feature Signature available:
-    if ($usage->refFeature === FEATURE_SIGNATURE) { ?>
+        <?php }
 
-        <h5>
-            Signature:
+        // Case Feature Signature available:
+        if ($usage->refFeature === FEATURE_SIGNATURE) { ?>
 
-            <a href="../page/home-auth/signature.php?refCustomer=<?= $user->getId(); ?>&refFeature=<?= $usage->refFeature ?>">
-                <?= Tools::usageToString($usage) ?>
-            </a>
-        </h5>
+            <h5>
+                Signature:
 
-    <?php }
+                <a href="../page/home-auth/signature.php?refCustomer=<?= $user->getId(); ?>&refFeature=<?= $usage->refFeature ?>">
+                    <?= Tools::usageToString($usage) ?>
+                </a>
+            </h5>
 
-    // Case Support-24:
-    if ($usage->refFeature === FEATURE_SUPPORT_24) { ?>
+        <?php }
 
-        <h5>
-            Support 24h/24:
+        // Case Support-24:
+        if ($usage->refFeature === FEATURE_SUPPORT_24) { ?>
 
-            <a href="../page/home-auth/support-24.php?refCustomer=<?= $user->getId(); ?>&refFeature=<?= $usage->refFeature ?>">
-                <?= Tools::usageToString($usage) ?>
-            </a>
-        </h5>
+            <h5>
+                Support 24h/24:
 
-    <?php }
-} ?>
+                <a href="../page/home-auth/support-24.php?refCustomer=<?= $user->getId(); ?>&refFeature=<?= $usage->refFeature ?>">
+                    <?= Tools::usageToString($usage) ?>
+                </a>
+            </h5>
+
+        <?php }
+    } ?>
+
+<?php } ?>

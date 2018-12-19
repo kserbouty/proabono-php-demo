@@ -33,12 +33,7 @@
 
             <hr>
 
-            <?php if(isset($usages)
-                && ($usages->totalItems > 0)) { ?>
-
             <?php include '../view/partial/overview.php' ?>
-
-            <?php } ?>
 
         </div>
 

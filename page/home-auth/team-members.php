@@ -8,7 +8,7 @@ require_once( __DIR__ . '/../../config.php' );
 
 $user = User::getCurrentUser();
 $refCustomer = $user->getId();
-$refFeature = 'team-members';
+$refFeature = FEATURE_TEAM_MEMBERS;
 
 //////// VARIABLES ////////////
 

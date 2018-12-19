@@ -10,14 +10,22 @@
 
         <div class="pt-2">
             <h5>
+
+                <?php if ($pricing->nextTerm) { ?>
                 <?= $pricing->nextTerm->labelLocalized ?> : <?= $pricing->nextTerm->pricingLocalized ?>
+                <?php } else { ?>
+                    <?= $pricing->labelLocalized ?> : <?= $pricing->pricingLocalized ?>
+                <?php } ?>
+
             </h5>
             <h5>
+
                 <?php if ($pricing->amountTotal === 0) { ?>
                     <p>La modification n'aura aucun coût à la facturation.</p>
                 <?php } else { ?>
                     <?= $pricing->labelLocalized ?> : <?= $pricing->pricingLocalized ?>
                 <?php } ?>
+
             </h5>
         </div>
 

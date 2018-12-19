@@ -18,7 +18,11 @@ $label = $is_enabled
 
         <div class="pt-2">
             <h5>
-                <?= $pricing->nextTerm->labelLocalized ?> : <?= $pricing->nextTerm->pricingLocalized ?>
+                <?php if ($pricing->nextTerm) { ?>
+                    <?= $pricing->nextTerm->labelLocalized ?> : <?= $pricing->nextTerm->pricingLocalized ?>
+                <?php } else { ?>
+                    <?= $pricing->labelLocalized ?> : <?= $pricing->pricingLocalized ?>
+                <?php } ?>
             </h5>
             <h5>
                 <?php if ($pricing->amountTotal === 0) { ?>

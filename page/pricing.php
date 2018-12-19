@@ -13,6 +13,8 @@ if (!$user) {
     $urlGrid = URL_PRICING_PUBLIC;
 
     include __DIR__ . '/../view/pricing.php';
+
+    die();
 }
 // if authenticated
 else {
