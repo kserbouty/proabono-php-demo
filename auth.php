@@ -25,7 +25,7 @@ if (ProAbono::$useCaching) {
 
     // load its usages to have them cached
     $usages = new UsageList();
-    $usages->fetch(null, $customer->refCustomer, null);
+    $usages->fetchByCustomer($customer->refCustomer, true);
 }
 //////// VIEW //////////////
 

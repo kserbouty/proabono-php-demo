@@ -69,15 +69,24 @@ $user = isset($user) ? $user : User::getCurrentUser(false);
                 </ul>
             </div>
 
-            <div class="flex-row flex-nowrap">
+            <div class="d-inline-flex flex-row flex-nowrap">
 
             <?php if(empty($user)) { ?>
 
-                <div class="flex-row">
+                <div class="flex-row mr-3">
                     <a href="/page/home-auth.php">
                         <button type="button" class="btn btn-outline-success btn-sm">
                             <img src="../../assets/img/icon_padlock.png" width="20" height="20" class="d-inline-block align-top mr-1" alt="">
                             Connexion
+                        </button>
+                    </a>
+                </div>
+
+                <div class="flex-row">
+                    <a href="/page/sign-up.php">
+                        <button type="button" class="btn btn-outline-primary btn-sm">
+                            <img src="../../assets/img/icon_padlock.png" width="20" height="20" class="d-inline-block align-top mr-1" alt="">
+                            Inscription
                         </button>
                     </a>
                 </div>

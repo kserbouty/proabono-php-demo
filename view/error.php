@@ -19,33 +19,38 @@
             </div>
         <?php } ?>
 
-        <?php if ($response->error->code) { ?>
-            <div class="d-flex flex-nowrap p-1 align-items-baseline">
-                <h4 class="mr-3">Code:</h4>
-                <p><?= $response->error->code ?></p>
-            </div>
-        <?php } ?>
+        <?php if ($response->error) {?>
 
-        <?php if ($response->error->target) { ?>
-            <div class="d-flex flex-nowrap p-1 align-items-baseline">
-                <h4 class="mr-3">Target:</h4>
-                <p><?= $response->error->target ?></p>
-            </div>
-        <?php } ?>
+            <?php if ($response->error->code) { ?>
+                <div class="d-flex flex-nowrap p-1 align-items-baseline">
+                    <h4 class="mr-3">Code:</h4>
+                    <p><?= $response->error->code ?></p>
+                </div>
+            <?php } ?>
 
-        <?php if ($response->error->message) { ?>
-            <div class="d-flex flex-nowrap p-1 align-items-baseline">
-                <h4 class="mr-3">Message:</h4>
-                <p><?= $response->error->message ?></p>
-            </div>
-        <?php } ?>
+            <?php if ($response->error->target) { ?>
+                <div class="d-flex flex-nowrap p-1 align-items-baseline">
+                    <h4 class="mr-3">Target:</h4>
+                    <p><?= $response->error->target ?></p>
+                </div>
+            <?php } ?>
+
+            <?php if ($response->error->message) { ?>
+                <div class="d-flex flex-nowrap p-1 align-items-baseline">
+                    <h4 class="mr-3">Message:</h4>
+                    <p><?= $response->error->message ?></p>
+                </div>
+            <?php } ?>
 
 
-        <?php if ($response->error->exception) { ?>
-            <div class="d-flex flex-nowrap p-1 align-items-baseline">
-                <h4 class="mr-3">Exception:</h4>
-                <p><?= $response->error->exception ?></p>
-            </div>
+            <?php if ($response->error->exception) { ?>
+                <div class="d-flex flex-nowrap p-1 align-items-baseline">
+                    <h4 class="mr-3">Exception:</h4>
+                    <p><?= $response->error->exception ?></p>
+                </div>
+            <?php } ?>
+
+
         <?php } ?>
 
 

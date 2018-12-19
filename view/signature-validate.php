@@ -26,13 +26,6 @@
         <div>
             <form class="text-center" action="/process/signature.php" method="post">
                 <input type="hidden" name="increment" value="<?= $increment ?>" />
-                <input type="hidden" name="validate" value="true" />
-                <input type="submit" value="Confirmer">
-            </form>
-        </div>
-
-    </div>
-
-</div>
+                <input type="ha
 
 <?php include 'layout/footer.php'; ?>

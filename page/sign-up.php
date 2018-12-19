@@ -7,20 +7,19 @@ require_once( __DIR__ . '/../config.php' );
 ///////// PARAMETERS //////////
 
 $user = User::getCurrentUser();
-$refCustomer = $user->getId();
 
 //////// VARIABLES ////////////
 
-$usages = new UsageList();
 
 //////// FETCH //////////////
 
-// If Customer's save is success, fetch usages (and ignore if failed)
-$usages->fetchByCustomer($refCustomer);
 
 //////// VIEW //////////////
 
-include __DIR__ . '/../view/home-auth.php';
+include __DIR__ . '/../view/sign-up.php';
+
+
+
 
 
 
