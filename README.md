@@ -1,4 +1,4 @@
-##Requirements:
+## Requirements
 
 The website works with dependencies available with [Composer](https://getcomposer.org/).
 
@@ -6,10 +6,10 @@ You need PHP >=5.6.0 to use the ProAbono client library with the website.
 
 It does not require any database as the subscription is managed in ProAbono and the authentication with [Auth0](https://auth0.com/).
 
-##Auth0
+## Auth0
 We assume your website is configured on localhost (which is probably a good idea to have Auth0 work properly without https).
 
-###Auth0 - Configuration
+### Auth0 - Configuration
 
 1° Create an account on [Auth0](https://auth0.com/).
 
@@ -18,7 +18,7 @@ We assume your website is configured on localhost (which is probably a good idea
 - Allowed Logout URLs: http://localhost/
 - Note the 3 values : Client Id, Domain and Client Secret.
 
-###Auth0 - Settings
+### Auth0 - Settings
 In the **.env** file, you need to set the 3 Auth0 Settings :
 - AUTH0_CLIENT_ID=yourClientId
 - AUTH0_DOMAIN=yourDomain
@@ -26,9 +26,9 @@ In the **.env** file, you need to set the 3 Auth0 Settings :
 
 If Auth0 suits your production website, [find here more information about Auth0 with PHP](https://auth0.com/docs/quickstart/webapp/php).
 
-##ProAbono
+## ProAbono
 
-###ProAbono - Configuration
+### ProAbono - Configuration
 
 1° Create an account on ProAbono
 
@@ -50,7 +50,7 @@ In the 5 following fields, enter this url : http://localhost/page/congratulation
 4° Open the top right menu by clicking your name, then select Integration.
 - Note the 4 values : keyAgent, keyApi, endpoint, public pricing url.
 
-###ProAbono - Settings
+### ProAbono - Settings
 
 In the **config.php** file, you need to set the 4 ProAbono Settings :
 
