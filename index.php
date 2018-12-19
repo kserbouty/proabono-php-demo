@@ -1,3 +1,3 @@
 <?php
 
-include 'view/home-public.php';
+include __DIR__ . '/view/home-public.php';

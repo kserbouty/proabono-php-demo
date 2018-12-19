@@ -2,9 +2,6 @@
 vendor
 composer.lock
 
-# Configuration #
-.env
-
 # IDE #
 .idea
 

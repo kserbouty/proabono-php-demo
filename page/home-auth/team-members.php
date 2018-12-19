@@ -13,7 +13,6 @@ $refFeature = 'team-members';
 //////// VARIABLES ////////////
 
 $usage = new Usage();
-$displayErrorName = null;
 
 //////// FETCH //////////////
 

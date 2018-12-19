@@ -12,7 +12,6 @@ $refCustomer = $user->getId();
 $refFeature = FEATURE_TEAM_MEMBERS;
 $increment = isset($_POST['increment']) ? $_POST['increment'] : null;
 $remove = isset($_POST['remove']) ? $_POST['remove'] : null;
-$displayError = null;
 
 // If the remove button has been clicked, then the quantity is substracted.
 if (isset($remove)) {
@@ -41,7 +40,6 @@ else {
     if ($response->is_success()) {
         header('Location:../page/home-auth.php');
     } else {
-        $displayError = 'to fetch for Team-Members';
         include '../view/error.php';
     }
 }

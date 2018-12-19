@@ -13,7 +13,6 @@ $refFeature = FEATURE_SIGNATURE;
 //////// VARIABLES ////////////
 
 $usage = new Usage();
-$messageError = null;
 
 //////// FETCH //////////////
 

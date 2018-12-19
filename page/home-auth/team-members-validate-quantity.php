@@ -18,7 +18,6 @@ $pricing = new Pricing();
 $customer = new Customer();
 $url = null;
 $labelUrl = null;
-$messageError = null;
 
 //////// FETCH //////////////
 

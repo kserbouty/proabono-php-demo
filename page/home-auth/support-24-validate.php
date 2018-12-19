@@ -18,11 +18,9 @@ $pricing = new Pricing();
 $customer = new Customer();
 $url = null;
 $labelUrl = null;
-$messageError = null;
 
 //////// FETCH //////////////
 
-// useless
 $usage = new Usage();
 
 $usage->refCustomer = $refCustomer;

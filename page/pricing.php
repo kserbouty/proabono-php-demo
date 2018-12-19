@@ -5,6 +5,7 @@
 require_once( __DIR__ . '/../config.php' );
 
 ///////// PARAMETERS //////////
+
 $user = User::getCurrentUser(false);
 
 // if anonymous
@@ -16,22 +17,22 @@ if (!$user) {
 // if authenticated
 else {
     $refCustomer = $user->getId();
+}
 
-    //////// VARIABLES ////////////
+//////// VARIABLES ////////////
 
-    $customer = new Customer();
+$customer = new Customer();
 
-    //////// FETCH //////////////
+//////// FETCH //////////////
 
-    // Enable the client portal link.
-    $response = $customer->fetch($refCustomer);
+// Enable the client portal link.
+$response = $customer->fetch($refCustomer);
 
-    //////// VIEW //////////////
+//////// VIEW //////////////
 
-    if ($response->is_success()) {
-        $urlGrid = $customer->links['hosted-collection-offers'];
-        include __DIR__ . '/../view/pricing.php';
-    } else {
-        include __DIR__ . '/../view/error.php';
-    }
+if ($response->is_success()) {
+    $urlGrid = $customer->links['hosted-collection-offers'];
+    include __DIR__ . '/../view/pricing.php';
+} else {
+    include __DIR__ . '/../view/error.php';
 }

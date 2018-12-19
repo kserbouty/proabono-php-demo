@@ -18,7 +18,6 @@ $pricing = new Pricing();
 $customer = new Customer();
 $url = null;
 $labelUrl = null;
-$messageError = null;
 
 //////// FETCH //////////////
 
@@ -29,7 +28,6 @@ $usage->increment = $increment;
 $response = $pricing->computeForUsage($usage);
 
 //////// VIEW //////////////
-
 
 // IS SUCCESS
 if ($response->is_success()) {

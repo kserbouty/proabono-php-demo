@@ -18,7 +18,6 @@ $usage = new Usage();
 $customer = new Customer();
 $url = null;
 $labelUrl = null;
-$messageError = null;
 
 //////// FETCH //////////////
 

@@ -40,6 +40,7 @@ else if ((($response->status == 404)
 
     $subscription = new Subscription();
     $subscription->fetchByCustomer($refCustomer);
+
     // if any and if running
     if ($subscription
         && ($subscription->stateSubscription == 'Running')) {

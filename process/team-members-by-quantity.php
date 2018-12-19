@@ -11,7 +11,6 @@ $validate = ((isset($_POST['validate']) ? $_POST['validate'] : 'false') == 'true
 $refCustomer = $user->getId();
 $refFeature = FEATURE_TEAM_MEMBERS;
 $quantity = isset($_POST['quantity']) ? $_POST['quantity'] : null;
-$displayError = null;
 
 //////// PROCESS //////////////
 
@@ -27,7 +26,6 @@ if ($validate) {
 
     // Verify if the string contain only an integer
     if ((!ctype_digit($quantity))) {
-        $displayError = ': Text input not allowed';
         include '../view/error.php';
     }
 
@@ -44,7 +42,6 @@ else {
     if ($response->is_success()) {
         header('Location:../page/home-auth.php');
     } else {
-        $displayError = 'to fetch for Team-Members';
         include '../view/error.php';
     }
 }

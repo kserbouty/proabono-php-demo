@@ -12,7 +12,6 @@ $refCustomer = $user->getId();
 $validate = ((isset($_POST['validate']) ? $_POST['validate'] : 'false') == 'true');
 $refFeature = FEATURE_SUPPORT_24;
 $is_enabled = isset($_POST['is_enabled']) ? $_POST['is_enabled'] : 'false';
-$displayError = null;
 
 $dateStamp = date(DATE_ISO8601);
 
@@ -41,8 +40,7 @@ else {
     if ($response->is_success()) {
         header('Location:../page/home-auth.php');
     } else {
-        $displayError = 'to redirect.';
-        include '../view/error.php';
+        include __DIR__ . '/../view/error.php';
     }
 }
 

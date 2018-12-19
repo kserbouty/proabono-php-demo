@@ -2,7 +2,7 @@
 
 //////// REQUIRE //////////////
 
-require_once('../config.php');
+require_once( __DIR__ . '/../config.php' );
 
 ///////// PARAMETERS //////////
 
@@ -12,7 +12,6 @@ $refCustomer = $user->getId();
 //////// VARIABLES ////////////
 
 $customer = new Customer();
-$messageError = null;
 
 //////// FETCH //////////////
 
@@ -20,7 +19,6 @@ $messageError = null;
 $response = $customer->fetch($refCustomer);
 
 //////// VIEW //////////////
-
 
 if ($response->is_success()) {
     include __DIR__ . '/../view/portal-home.php';

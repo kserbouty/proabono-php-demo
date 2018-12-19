@@ -25,7 +25,7 @@ if ($response->is_success()
     // if we have data
     && ($usage-> typeFeature)) {
     $is_enabled = $usage->is_enabled;
-    include '../../view/support-24.php';
+    include __DIR__ . '/../../view/support-24.php';
 }
 else {
     include __DIR__ . '/../../error/feature-unavailable.php';
