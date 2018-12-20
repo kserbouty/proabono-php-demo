@@ -1,13 +1,19 @@
 <?php include 'layout/header.php'; ?>
 
-<h3 class="text-center">Subscribe Now</h3>
+<div class="card m-auto text-center" style="width: 60%; height: 760px">
 
-<div class="mt-4" style="width: 80%; height: 600px">
-    <iframe frameBorder="0"
-            width=100%
-            height=100%
-            src="<?= $urlGrid ?>">
-    </iframe>
+    <div class="card-header text-white bg-dark">
+        <h4>Subscribe Now</h4>
+    </div>
+
+    <div class="card-body">
+        <iframe frameBorder="0"
+                width=100%
+                height=100%
+                src="<?= $urlGrid ?>">
+        </iframe>
+    </div>
+
 </div>
 
 <?php include 'partial/faq-grid.php'; ?>

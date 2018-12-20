@@ -4,8 +4,8 @@
 $value = $is_enabled ? 'false' : 'true';
 
 $label = $is_enabled
-    ? 'Désactiver'
-    : 'Activer'
+    ? 'Disable'
+    : 'Enable'
 ?>
 
 <div class="card m-auto text-center" style="width: 45%;">
@@ -17,7 +17,7 @@ $label = $is_enabled
     <div class="card-body">
 
         <div class="pt-2">
-            <h4>Status: <?= Tools::usageToString($usage) ?></h4>
+            <h4>Current status: <?= Tools::usageToString($usage) ?></h4>
         </div>
 
         <div>

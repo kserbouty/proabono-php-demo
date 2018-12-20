@@ -22,6 +22,12 @@ ProAbono::$endpoint = 'https://api-848.proabono.com';
 
 const URL_PRICING_PUBLIC = 'https://demo-php-EUR.proabono.com/pricing';
 
+// To disable caching.
+//ProAbono::$useCaching = false;
+
+// To change chaching expiration delay.
+//ProAbono::$cacheExpires = 300 ;
+
 ///////////////////////////////////////////////////////////
 
 

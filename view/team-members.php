@@ -9,7 +9,7 @@
     <div class="card-body">
 
         <div>
-            <h7>Available: <?= Tools::usageToString($usage) ?>.</h7>
+            <h7>Already members: <?= Tools::usageToString($usage) ?>.</h7>
         </div>
 
         <hr>
@@ -23,7 +23,7 @@
 
                 <div>
                     <button type="submit" class="btn btn-outline-danger" name="remove">
-                        Enlever
+                        Remove
                     </button>
                 </div>
 
@@ -41,7 +41,7 @@
 
                 <div>
                     <button type="submit" class="btn btn-outline-success">
-                        Ajouter
+                        Add
                     </button>
                 </div>
 
@@ -63,7 +63,7 @@
 
             <div>
                 <button type="submit" class="btn btn-outline-success">
-                    Set
+                    Validate
                 </button>
             </div>
 

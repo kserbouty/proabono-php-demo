@@ -33,7 +33,7 @@
         if ($usage->refFeature === FEATURE_SUPPORT_24) { ?>
 
             <h5>
-                Support 24h/24:
+                Support 24h:
 
                 <a href="../page/home-auth/support-24.php?refCustomer=<?= $user->getId(); ?>&refFeature=<?= $usage->refFeature ?>">
                     <?= Tools::usageToString($usage) ?>

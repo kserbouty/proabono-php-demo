@@ -13,7 +13,6 @@ $refFeature = FEATURE_SUPPORT_24;
 //////// VARIABLES ////////////
 
 $usage = new Usage();
-$displayErrorName = null;
 
 //////// FETCH //////////////
 

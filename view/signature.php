@@ -9,7 +9,7 @@
     <div class="card-body">
 
             <div>
-                <h5>Available: <?= Tools::usageToString($usage) ?></h5>
+                <h5>Already signed: <?= Tools::usageToString($usage) ?></h5>
             </div>
 
             <hr>
@@ -21,7 +21,7 @@
                 <div>
 
                     <div>
-                        <label for="add-signature">Selectionner le nombre de signatures:</label>
+                        <label for="add-signature">How many documents do you want sign ?</label>
                     </div>
 
                     <div class="d-inline-flex p-4">
@@ -43,7 +43,7 @@
 
                     <div class="mr-3 ml-3">
                         <button type="submit" class="btn btn-block btn-outline-success">
-                            Valider
+                            Validate
                         </button>
                     </div>
 
