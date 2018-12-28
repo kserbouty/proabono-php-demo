@@ -38,7 +38,7 @@ else {
     if ($response->is_success()) {
         header('Location:../page/home-auth.php');
     } else {
-        include '../view/error.php';
+        include __DIR__ . '/../view/error.php';
     }
 }
 

@@ -1,5 +1,6 @@
 <?php
 
+
 // CASE BILLING ADDRESS MISSING
 if (($response->status == 403)
     && ($response->error->code === 'Error.Customer.PaymentSettings.Missing')) {

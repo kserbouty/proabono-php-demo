@@ -1,12 +1,14 @@
 <?php
 
 //////// REQUIRE //////////////
+
 require_once('config.php');
 
 // If the user is not connected, redirect to the login page.
 $user = User::getCurrentUser(false);
 
 ///////// PARAMETERS //////////
+
 $urlSuccess = isset($_GET['state']) ? $_GET['state'] : '/';
 
 //////// VARIABLES ///////////
@@ -14,9 +16,10 @@ $urlSuccess = isset($_GET['state']) ? $_GET['state'] : '/';
 //////// FETCH /////////////
 
 /////////// CACHING STRATEGY ///////////
-if (ProAbono::$useCaching) {
-    // Save Customer into ProAbono while the first connexion.
 
+if (ProAbono::$useCaching) {
+
+    // Save Customer into ProAbono while the first connexion.
     $customer = new Customer();
     $customer->name = $user->getName();
     $customer->refCustomer = $user->getId();
@@ -32,6 +35,6 @@ if (ProAbono::$useCaching) {
 if ($response->is_success()) {
     header('Location: '. $urlSuccess);
 } else {
-    include __DIR__ . '/../view/error.php';
+    include __DIR__ . '/view/error.php';
 }
 

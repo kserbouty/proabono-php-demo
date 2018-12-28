@@ -1,10 +1,22 @@
 <?php
 
 
+/**
+ * User model
+ *
+ * Manage the authentication provides by Auth0
+ * Can return specified data
+ *
+ * @copyright Copyright (c) 2018 ProAbono
+ * @license MIT
+ */
+
+
 use Auth0\SDK\Auth0;
 
 
 class User {
+
 
     // The domain of the OIDC Provider Auth0 tenant
     private static $domain = null;
@@ -27,7 +39,6 @@ class User {
 
     /**
      * Ensure the authentication before processing a request.
-     *
      */
     private static function ensureInitialized() {
         if (!isset(User::$domain)) {
@@ -86,6 +97,10 @@ class User {
         return $user;
     }
 
+
+    /**
+     * @throws \Auth0\SDK\Exception\CoreException
+     */
     public static function logout() {
         User::ensureInitialized();
 
@@ -107,18 +122,20 @@ class User {
         header('Location: ' . $logout_url);
     }
 
+
     public function getId() {
-        return $this->rawData_from_auth0['user_id']
-            ?? $this->rawData_from_auth0['sub'];
+        return isset($this->rawData_from_auth0['user_id'])
+            ? $this->rawData_from_auth0['user_id']
+            : $this->rawData_from_auth0['sub'];
     }
 
 
     public function getDisplayName() {
-        return $this->rawData_from_auth0['nickname']
-            ?? $this->rawData_from_auth0['name']
-            ?? $this->rawData_from_auth0['email']
-            ?? '(unknown)';
+        return isset($this->rawData_from_auth0['nickname'])
+            ? $this->rawData_from_auth0['nickname']
+            : $this->rawData_from_auth0['name'];
     }
+
 
     public function getEmail() {
         $email = $this->rawData_from_auth0['name'];
@@ -132,6 +149,7 @@ class User {
         return null;
     }
 
+
     public function getName() {
 
         $name = $this->rawData_from_auth0['name'];
@@ -143,7 +161,7 @@ class User {
             return $this->rawData_from_auth0['nickname'];
         }
         return $name;
-
     }
+
 
 }

@@ -13,7 +13,6 @@ require __DIR__ . '/utils/Tools.php';
 // Constants for features:
 require __DIR__ . '/features.php';
 
-
 ////////////// PROABONO SETTINGS //////////////////////////
 
 ProAbono::$keyAgent = 'b61e217c-92de-458f-9a5b-26c5c74328b4';
@@ -25,7 +24,7 @@ const URL_PRICING_PUBLIC = 'https://demo-php-EUR.proabono.com/pricing';
 // To disable caching.
 //ProAbono::$useCaching = false;
 
-// To change chaching expiration delay.
+// To change caching expiration delay.
 //ProAbono::$cacheExpires = 300 ;
 
 ///////////////////////////////////////////////////////////

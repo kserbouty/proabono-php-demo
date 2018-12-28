@@ -5,11 +5,15 @@ class Tools {
 
 
     /**
+     * Return a string with the current information of an usage
+     *
      * @param $usage
      * @return string
      */
     public static function usageToString($usage) {
 
+
+        ///////////// CONSUMPTION /////////////
         if ($usage->typeFeature === 'Consumption') {
 
             // Set current quantity.
@@ -24,7 +28,10 @@ class Tools {
 
             return $current . ' / ' . $usage->quantityIncluded;
         }
+        ///////////////////////////////////////
 
+
+        ///////////// LIMITATION /////////////
         if ($usage->typeFeature === 'Limitation') {
 
             // Set current quantity.
@@ -38,9 +45,11 @@ class Tools {
             }
 
             return $current . ' / ' . $usage->quantityIncluded;
-
         }
+        //////////////////////////////////////
 
+
+        /////////////// ON OFF ///////////////
         if ($usage->typeFeature === 'OnOff') {
 
             return ($usage->is_enabled)
@@ -48,6 +57,9 @@ class Tools {
                 : '<em>Disabled</em>';
 
         }
+        //////////////////////////////////////
+
+
         return 'Unmanaged Usage type';
     }
 

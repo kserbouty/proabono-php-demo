@@ -26,7 +26,7 @@ if ($validate) {
 
     // Verify if the string contain only an integer
     if ((!ctype_digit($quantity))) {
-        include '../view/error.php';
+        include __DIR__ . '/../view/error.php';
     }
 
     $response = $usage->save(null);
@@ -42,6 +42,6 @@ else {
     if ($response->is_success()) {
         header('Location:../page/home-auth.php');
     } else {
-        include '../view/error.php';
+        include __DIR__ . '/../view/error.php';
     }
 }
